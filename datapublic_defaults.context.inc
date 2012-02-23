@@ -108,6 +108,51 @@ function datapublic_defaults_context_default_contexts() {
   $context = new stdClass;
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
+  $context->name = 'media_room';
+  $context->description = 'Media room page';
+  $context->tag = 'Pages';
+  $context->conditions = array(
+    'path' => array(
+      'values' => array(
+        'media-room' => 'media-room',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'views-press_releases-block_1' => array(
+          'module' => 'views',
+          'delta' => 'press_releases-block_1',
+          'region' => 'post_content1',
+          'weight' => '-10',
+        ),
+        'views-photo_gallery-block' => array(
+          'module' => 'views',
+          'delta' => 'photo_gallery-block',
+          'region' => 'post_content2',
+          'weight' => '-10',
+        ),
+        'views-videos-block' => array(
+          'module' => 'views',
+          'delta' => 'videos-block',
+          'region' => 'post_content2',
+          'weight' => '-9',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Media room page');
+  t('Pages');
+  $export['media_room'] = $context;
+
+  $context = new stdClass;
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
   $context->name = 'menu';
   $context->description = 'Main menu';
   $context->tag = 'Sitewide';
