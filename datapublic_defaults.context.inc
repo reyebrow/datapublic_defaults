@@ -193,6 +193,8 @@ function datapublic_defaults_context_default_contexts() {
     'path' => array(
       'values' => array(
         '~<front>' => '~<front>',
+        '~datasets' => '~datasets',
+        '~services' => '~services',
       ),
     ),
     'sitewide' => array(
@@ -210,16 +212,23 @@ function datapublic_defaults_context_default_contexts() {
           'region' => 'sidebar_second',
           'weight' => '-10',
         ),
+        'views-most_popular_content-block_1' => array(
+          'module' => 'views',
+          'delta' => 'most_popular_content-block_1',
+          'region' => 'sidebar_second',
+          'weight' => '-9',
+        ),
       ),
     ),
   );
-  $context->condition_mode = 0;
+  $context->condition_mode = 1;
 
   // Translatables
   // Included for use with string extractors like potx.
   t('Sidebar menu block');
   t('Sitewide');
   $export['sidebar_menu'] = $context;
+
 
   $context = new stdClass;
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
