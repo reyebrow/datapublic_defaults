@@ -38,5 +38,13 @@ function datapublic_defaults_strongarm() {
   $strongarm->value = 'datapublic';
   $export['theme_default'] = $strongarm;
 
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'follow_site_block_title';
+  $strongarm->value = '2';
+  $export['follow_site_block_title'] = $strongarm;
+
+
   return $export;
 }

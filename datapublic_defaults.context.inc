@@ -263,5 +263,51 @@ function datapublic_defaults_context_default_contexts() {
   t('Translation block');
   $export['translation_block'] = $context;
 
+  $context = new stdClass;
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
+  $context->name = 'footer';
+  $context->description = 'Footer blocks';
+  $context->tag = 'Sitewide';
+  $context->conditions = array(
+    'sitewide' => array(
+      'values' => array(
+        1 => 1,
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'views-tweets-block' => array(
+          'module' => 'views',
+          'delta' => 'tweets-block',
+          'region' => 'footer',
+          'weight' => '-10',
+        ),
+        'follow-site' => array(
+          'module' => 'follow',
+          'delta' => 'site',
+          'region' => 'footer',
+          'weight' => '-9',
+        ),
+        'block-4' => array(
+          'module' => 'block',
+          'delta' => 4,
+          'region' => 'footer',
+          'weight' => '-8',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Footer blocks');
+  t('Sitewide');
+  $export['footer'] = $context;
+
+
   return $export;
 }
