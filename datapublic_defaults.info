@@ -219,4 +219,4 @@ features[views_view][] = "most_popular_content"
 features[views_view][] = "tweets"
 
 name = "DataPublic Defaults"
-package = "Features"
+package = "Datapublic"
