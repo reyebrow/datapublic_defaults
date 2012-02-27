@@ -17,15 +17,30 @@ function datapublic_defaults_default_fe_block_settings() {
     'module' => 'block',
     'theme' => 'datapublic_theme',
     'status' => 0,
-    'weight' => '0',
+    'weight' => '-4',
     'region' => '',
     'custom' => '0',
     'visibility' => '0',
     'pages' => '',
     'title' => 'Newsletter Sign Up',
-    'cache' => -1,
+    'cache' => '-1',
     'i18n_mode' => '0',
     'machine_name' => 'newsletter_signup_block',
+  );
+
+  $theme['superfish-1'] = array(
+    'module' => 'superfish',
+    'delta' => '1',
+    'theme' => 'datapublic_theme',
+    'status' => 0,
+    'weight' => '-9',
+    'region' => '',
+    'custom' => '0',
+    'visibility' => '0',
+    'pages' => '',
+    'title' => '<none>',
+    'cache' => '-1',
+    'i18n_mode' => '0',
   );
 
   $export['datapublic_theme'] = $theme;

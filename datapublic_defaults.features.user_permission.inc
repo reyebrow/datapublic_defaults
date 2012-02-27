@@ -127,6 +127,15 @@ function datapublic_defaults_user_default_permissions() {
     'module' => 'user',
   );
 
+  // Exported permission: add twitter accounts
+  $permissions['add twitter accounts'] = array(
+    'name' => 'add twitter accounts',
+    'roles' => array(
+      0 => 'administrator',
+    ),
+    'module' => 'twitter',
+  );
+
   // Exported permission: administer CAPTCHA settings
   $permissions['administer CAPTCHA settings'] = array(
     'name' => 'administer CAPTCHA settings',
@@ -218,6 +227,12 @@ function datapublic_defaults_user_default_permissions() {
       0 => 'administrator',
     ),
     'module' => 'filter',
+  );
+
+  // Exported permission: administer follow
+  $permissions['administer follow'] = array(
+    'name' => 'administer follow',
+    'roles' => array(),
   );
 
   // Exported permission: administer google analytics
@@ -1058,6 +1073,12 @@ function datapublic_defaults_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: edit own follow links
+  $permissions['edit own follow links'] = array(
+    'name' => 'edit own follow links',
+    'roles' => array(),
+  );
+
   // Exported permission: edit own page content
   $permissions['edit own page content'] = array(
     'name' => 'edit own page content',
@@ -1152,6 +1173,24 @@ function datapublic_defaults_user_default_permissions() {
       0 => 'administrator',
     ),
     'module' => 'webform',
+  );
+
+  // Exported permission: edit site follow links
+  $permissions['edit site follow links'] = array(
+    'name' => 'edit site follow links',
+    'roles' => array(
+      0 => 'administrator',
+    ),
+    'module' => 'follow',
+  );
+
+  // Exported permission: import own tweets
+  $permissions['import own tweets'] = array(
+    'name' => 'import own tweets',
+    'roles' => array(
+      0 => 'administrator',
+    ),
+    'module' => 'twitter',
   );
 
   // Exported permission: manage features
@@ -1292,6 +1331,15 @@ function datapublic_defaults_user_default_permissions() {
     'module' => 'search',
   );
 
+  // Exported permission: use global twitter account
+  $permissions['use global twitter account'] = array(
+    'name' => 'use global twitter account',
+    'roles' => array(
+      0 => 'administrator',
+    ),
+    'module' => 'twitter',
+  );
+
   // Exported permission: use on-page translation
   $permissions['use on-page translation'] = array(
     'name' => 'use on-page translation',
@@ -1374,55 +1422,6 @@ function datapublic_defaults_user_default_permissions() {
     ),
     'module' => 'system',
   );
-
-  // Exported permission: add twitter accounts
-  $permissions['add twitter accounts'] = array(
-    'name' => 'add twitter accounts',
-    'roles' => array(
-      0 => 'administrator',
-    ),
-    'module' => 'twitter',
-  );
-
-  // Exported permission: administer follow
-  $permissions['administer follow'] = array(
-    'name' => 'administer follow',
-    'roles' => array(),
-  );
-
-  // Exported permission: edit own follow links
-  $permissions['edit own follow links'] = array(
-    'name' => 'edit own follow links',
-    'roles' => array(),
-  );
-
-  // Exported permission: edit site follow links
-  $permissions['edit site follow links'] = array(
-    'name' => 'edit site follow links',
-    'roles' => array(
-      0 => 'administrator',
-    ),
-    'module' => 'follow',
-  );
-
-  // Exported permission: import own tweets
-  $permissions['import own tweets'] = array(
-    'name' => 'import own tweets',
-    'roles' => array(
-      0 => 'administrator',
-    ),
-    'module' => 'twitter',
-  );
-
-  // Exported permission: use global twitter account
-  $permissions['use global twitter account'] = array(
-    'name' => 'use global twitter account',
-    'roles' => array(
-      0 => 'administrator',
-    ),
-    'module' => 'twitter',
-  );
-
 
   return $permissions;
 }
