@@ -252,12 +252,12 @@ function datapublic_defaults_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'superfish_slp';
-  $strongarm->value = 'sites/all/libraries/superfish/jquery.hoverIntent.minified.js
-sites/all/libraries/superfish/jquery.bgiframe.min.js
-sites/all/libraries/superfish/superfish.js
-sites/all/libraries/superfish/supersubs.js
-sites/all/libraries/superfish/supposition.js
-sites/all/libraries/superfish/sftouchscreen.js';
+  $strongarm->value = 'profiles/datapublic/libraries/superfish/jquery.hoverIntent.minified.js
+profiles/datapublic/libraries/superfish/jquery.bgiframe.min.js
+profiles/datapublic/libraries/superfish/superfish.js
+profiles/datapublic/libraries/superfish/supersubs.js
+profiles/datapublic/libraries/superfish/supposition.js
+profiles/datapublic/libraries/superfish/sftouchscreen.js';
   $export['superfish_slp'] = $strongarm;
 
   $strongarm = new stdClass;
