@@ -340,16 +340,6 @@ function datapublic_defaults_user_default_permissions() {
     'module' => 'user',
   );
 
-  // Exported permission: administer recaptcha
-  $permissions['administer recaptcha'] = array(
-    'name' => 'administer recaptcha',
-    'roles' => array(
-      0 => 'administrator',
-      1 => 'editor',
-    ),
-    'module' => 'recaptcha',
-  );
-
   // Exported permission: administer search
   $permissions['administer search'] = array(
     'name' => 'administer search',
