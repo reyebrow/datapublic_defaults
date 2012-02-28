@@ -1,6 +1,7 @@
 name = "DataPublic Defaults"
 description = "Provides defaults for DataPublic"
 core = "7.x"
+version="7.x-1.0-beta1"
 package = "Datapublic"
 php = "5.2.4"
 dependencies[] = "block"
