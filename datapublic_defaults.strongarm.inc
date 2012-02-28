@@ -372,6 +372,13 @@ profiles/datapublic/libraries/superfish/sftouchscreen.js';
   $strongarm->value = '1';
   $export['error_level'] = $strongarm;
 
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'fullcalendar_path';
+  $strongarm->value = 'profiles/datapublic/libraries/fullcalendar';
+  $export['fullcalendar_path'] = $strongarm;
+
 
   return $export;
 }
