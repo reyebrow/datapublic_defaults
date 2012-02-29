@@ -26,3 +26,12 @@ function datapublic_defaults_menu_block_blocks() {
   );
 }
 
+/**
+ * Implementation of hook_form_FORM_ID_alter().
+ * Alter the installation form to set Canada as the default country.
+ */
+function datapublic_defaults_form_install_configure_form_alter(&$form, $form_state) {
+  $form['server_settings']['site_default_country']['#default_value'] = 'Canada';
+}
+
+
