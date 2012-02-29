@@ -12,7 +12,7 @@ include_once('datapublic_defaults.features.inc');
 function datapublic_defaults_menu_block_blocks() {
   // The array key is the block delta used by menu block.
   return array(
-    '1' => array(
+    'menu_block-1' => array(
       'menu_name'   => 'main-menu',
       'parent_mlid' => 0,
       'title_link'  => 0,
@@ -25,13 +25,3 @@ function datapublic_defaults_menu_block_blocks() {
     ),
   );
 }
-
-/**
- * Implementation of hook_form_FORM_ID_alter().
- * Alter the installation form to set Canada as the default country.
- */
-function datapublic_defaults_form_install_configure_form_alter(&$form, $form_state) {
-  $form['server_settings']['site_default_country']['#default_value'] = 'Canada';
-}
-
-
