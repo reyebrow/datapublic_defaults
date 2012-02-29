@@ -43,14 +43,22 @@ function datapublic_defaults_default_fe_block_settings() {
     'i18n_mode' => '0',
   );
 
+  $theme['superfish-2'] = array(
+    'module' => 'superfish',
+    'delta' => '2',
+    'theme' => 'datapublic_theme',
+    'status' => 0,
+    'weight' => '3',
+    'region' => '',
+    'custom' => '0',
+    'visibility' => '0',
+    'pages' => '',
+    'title' => '<none>',
+    'cache' => '-1',
+    'i18n_mode' => '0',
+  );
+
   $export['datapublic_theme'] = $theme;
 
-  $theme_default = variable_get('theme_default', 'garland');
-  $themes = list_themes();
-  foreach ($export as $theme_key => $settings) {
-    if ($theme_key != $theme_default && empty($themes[$theme_key]->status)) {
-      unset($export[$theme_key]);
-    }
-  }
   return $export;
 }

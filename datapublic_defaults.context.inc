@@ -217,6 +217,12 @@ function datapublic_defaults_context_default_contexts() {
           'region' => 'nav',
           'weight' => '-10',
         ),
+        'superfish-2' => array(
+          'module' => 'superfish',
+          'delta' => 2,
+          'region' => 'nav_mobile',
+          'weight' => '-10',
+        ),
       ),
     ),
   );
