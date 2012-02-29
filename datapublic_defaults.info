@@ -309,3 +309,10 @@ features[variable][] = "superfish_wrapmul_2"
 features[variable][] = "superfish_wrapul_2"
 features[variable][] = "superfish_zebra_2"
 
+features[variable][] = "date_format_event_date"
+features[variable][] = "date_format_event_time"
+features[variable][] = "date_format_long"
+features[variable][] = "date_format_medium"
+features[variable][] = "date_format_short"
+
+
